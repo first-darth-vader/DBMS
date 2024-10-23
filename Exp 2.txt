@@ -1,0 +1,20 @@
+CREATE TABLE teacher_info(
+teacher_id int,
+teacher_name varchar(10),
+dept_name varchar(10),
+salary int,
+subject_taught varchar(10)   
+);
+insert into teacher_info values(1,'Chaitanya','AI',50000,'ML'),(2,'kay','CS',10000,'OS'),(3,'Ray','IT',12000,'CD'),(4,'Ash','E&TC',40000,'Semi_con'),(5,'Happy','AI',80000,'DL');
+select* from teacher_info;
+
+CREATE TABLE student_info(
+roll_no int primary key,
+student_name varchar(10) not null,
+dept_name varchar(10) not null,
+class varchar(10) not null,
+result varchar(10) not null  
+);
+
+insert into student_info values(101,'Kisan','AI','TY',85),(102,'Sam','IT','SY',90),(103,'Natasha','CS','TY',98),(104,'Tony','AI','TY',99),(105,'Steve','E&TC','SY',77);
+select* from student_info;
