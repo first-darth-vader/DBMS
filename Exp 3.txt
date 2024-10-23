@@ -1,0 +1,34 @@
+-- Create the student2 table
+CREATE TABLE student2 (
+    StudentID int PRIMARY KEY NOT NULL,
+    firstname varchar(50) NOT NULL,
+    lastname varchar(50) NOT NULL,
+    address varchar(50) NOT NULL,
+    city varchar(50) NOT NULL
+);
+
+-- Insert some sample data into the student2 table
+INSERT INTO student2 (StudentID, firstname, lastname, address, city) VALUES
+(1, 'John', 'Doe', '123 Maple St', 'New York'),
+(2, 'Jane', 'Smith', '456 Oak St', 'Los Angeles'),
+(3, 'Emily', 'Jones', '789 Pine St', 'Chicago');
+
+-- Create a view named student_view
+CREATE VIEW student_view AS
+SELECT StudentID, firstname, lastname
+FROM student2;
+
+-- Query the view to display its content
+SELECT * FROM student_view;
+
+-- Update an existing record in the student2 table
+UPDATE student2
+SET city = 'San Francisco'
+WHERE StudentID = 2;
+
+-- Delete a record from the student2 table
+DELETE FROM student2
+WHERE StudentID = 3;
+
+-- Query the view again to see the changes after update and delete operations
+SELECT * FROM student_view;
